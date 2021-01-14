@@ -12,7 +12,7 @@ module.exports = XrespondSource = React.createClass
     @publish 'sourceSubmit', @assert_prefix(source_value)
 
   assert_prefix: (url) ->
-    if url.match(/^https/) or url == '' then url else 'https://' + url
+    if url.match(/^http/) or url == '' then url else 'https://' + url
 
   render: ->
     <form className="source-url__wrap" onSubmit={@handleSubmit}>
